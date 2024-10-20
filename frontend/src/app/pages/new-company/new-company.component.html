@@ -1,0 +1,91 @@
+<form id="new_company" [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="title">
+            <span class="color-2">Request to Create </span>
+            <span class="color-1">New Company</span>
+        </div>
+        <hr>
+        <div class="col">
+            <div class="mb-3">
+                <p class="sub-label" for="company"> Your Company</p>
+            </div>
+            <div class="mb-3">
+                <p class="text" for="companyName">Company Name</p>
+                <input type="text" class="form-control" formControlName="companyName" name="companyName" id="companyName" placeholder="" required>
+                <div class="invalid-feedback">
+                    Please enter your company name.
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text" for="companyAdress">Company Adress</p>
+                        <input type="text" type="text" class="form-control" formControlName="companyAddress" name="companyAdress" id="companyAdress"
+                            placeholder="" required>
+                        <div class="invalid-feedback">
+                            Please enter your company adress.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text" for="description">Company Email</p>
+                        <input type="text" type="text" class="form-control" formControlName="companyEmail" name="companyEmail" id="companyEmail"
+                            placeholder="" required>
+                        <div class="invalid-feedback">
+                            Please enter your description.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <p class="text" for="companyDescription">Company Description</p>
+                <textarea rows="5" Description="text" class="form-control" formControlName="companyDescription" name="companyDescription"
+                    id="companyDescription" placeholder="" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter your company description.
+                </div>
+            </div>
+            <div class="mb-3">
+                <p class="text" for="companyGoal">Company Goal</p>
+                <textarea rows="5" type="text" class="form-control" formControlName="companyGoal" name="companyGoal" id="companyGoal"
+                    placeholder="" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter your company goal.
+                </div>
+            </div>
+            <div class="Company-logo">
+                <p class="text">Edit your Company Logo</p>
+                <div class="box center">
+                    <div class="p-2 icon-cate center">
+                        <img src="assets/icons/FileUpload.svg" alt="Icon">
+                    </div>
+                    <p class="text-center">Select or Drag and Drop here</p>
+                    <p class="text-center opacity"> <span style="color:gray">PNG, SVG file size no more than
+                            10MB</span></p>
+                    <label class="center text-center" for="CompanyLogo">Select file</label>
+                    <input type="file" id="CompanyLogo" name="CompanyLogo"  accept="image/png, image/jpeg" (change)="onFileChange($event)"
+                        class="lg-center">
+                </div> <br>
+            </div> 
+            {{ message }}
+        </div>
+        <div class="action d-flex justify-content-between mt-5">
+            <a href="" type="reset" onclick="location.href='/personal-employer';" href="/personal-employer" class="btn btn-secondary">Cancel</a>
+            <button type="submit" value="Apply CV" class="btn btn-primary ml-5">Apply</button>
+        </div>
+    </div>
+    </div>
+    </form>
+    <script>
+    document.getElementById('new_company').addEventListener('submit', function(event) {
+    var fileInput = document.getElementById('file');
+
+    var textInput = document.getElementById('cv-lt');
+    
+    // Kiểm tra xem trường văn bản đã được nhập hay chưa
+    if (textInput.value.trim() === '') {
+    alert('Vui lòng nhập văn bản vào trường!');
+    event.preventDefault(); // Ngăn chặn form được submit nếu trường văn bản trống
+    }
+    });
+    </script>

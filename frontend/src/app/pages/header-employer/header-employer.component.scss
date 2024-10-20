@@ -1,0 +1,120 @@
+@import '../../../style/variables';
+@import '../../../style/typography';
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: $dark-teal;
+  text-decoration: none;
+
+}
+body{
+    font-family: $font-default;
+}
+.navbar-brand img{
+  width: 80px;
+  height: 80px;
+}
+.nav-item {
+  align-items: center; 
+  display: flex; 
+}
+
+
+//Button
+button {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out; 
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 100px;
+    border: none;
+    @include font-large-medium;
+    color: $dark-teal;
+  }
+button:hover {
+    transform: translateY(-5px);
+    color: white;
+}
+  
+  button.primary {
+    background-color: $light-turtoise; 
+    border: $light-turtoise;
+  
+    &:hover {
+      background-color: darken($light-turtoise, 10%); 
+      border: darken($light-turtoise, 10%);
+    }
+  
+    &:active {
+      background-color: darken($light-turtoise, 20%); 
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.secondary {
+    background-color: white; 
+    border: 1px solid $dark-teal;
+  
+    &:hover {
+      background-color: darken(white, 20%); 
+      border: 1px solid darken(white, 20%);
+    }
+  
+    &:active {
+      background-color: darken(white, 50%);  
+      transform: translateY(2px); 
+    }
+  }
+  
+    
+  .divider {
+    border-right: 2px solid $dark-teal; 
+    height: 25px; 
+    margin: 0 10px; 
+  }
+
+  .notification-icon img {
+    width: 24px; 
+    height: auto; 
+    margin-right: 12px;
+  }
+  
+  
+  .nav-item.dropdown img {
+    width: 52px; 
+    height: auto; 
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 3px solid $light-turtoise;
+  }
+  .navbar.navbar-brand{
+    width: 50px;
+    height: auto;
+  }
+  
+.nav-item .nav-link {
+    @include font-large-medium;
+    color: lightgray;
+    background-color: transparent;
+    border-radius: 100px; 
+    padding: 5px;
+  }
+  
+  .nav-item.active .nav-link {
+    color: $dark-teal;
+
+  }
+
+  .nav-item .nav-link:hover {
+    color: $dark-teal;
+    transform: translateY(-2px);
+  }
+  
+  .nav-item {
+    margin-right: 10px; 
+    padding: 10px;
+
+  } 
+  

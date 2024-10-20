@@ -1,0 +1,65 @@
+<div class="wrapper d-flex flex-row">
+    <div class="sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="main-content">
+      <div class="container d-flex flex-column">
+        <div class="top d-flex justify-content-between align-items-center">
+          <span class="h4">Job Seekers</span>
+          <div class="search-container">
+            <div class="input-wrapper">
+              <img src="/assets/icons/Search.svg" alt="Search" class="search-icon">
+              <input type="text" class="search-input" placeholder="Search" [(ngModel)]="searchTerm">
+            </div>
+            <img src="/assets/img/Avatar.png" alt="User" class="user-avatar">
+          </div>
+        </div>
+        <div class="table-container flex-grow-1">
+          <table>
+            <thead>
+              <tr>
+                <th class="rounded-top-left">Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th class="rounded-top-right">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr *ngFor="let jobSeeker of paginatedJobSeekers">
+                <td>{{ jobSeeker.name }}</td>
+                <td>{{ jobSeeker.email }}</td>
+                <td>{{ jobSeeker.phone }}</td> -->
+              <tr *ngFor="let user of userList">
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.phone }}</td>
+                <td class="d-flex justify-content-start"> 
+                    <button class="secondary">Send Email</button> 
+                    <button class="primary d-flex align-items-center mx-2"> 
+                        View 
+                        <img src="assets/icons/Chevron Right.svg" alt=""> 
+                    </button> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-control d-inline-flex justify-content-start align-items-center mt-auto">
+          <div class="rows-per-page d-inline-flex">
+            <label for="rows" class="align-self-center">Rows per page:</label>
+            <select id="rows" name="rows" [(ngModel)]="rowsPerPage" (change)="onRowsPerPageChange()">
+              <option *ngFor="let option of rowsOptions" [value]="option">{{ option }}</option>
+            </select>
+          </div>
+          <div class="pagination-info">
+            {{currentPage}}/{{totalPages}}
+          </div>
+          <div class="pagination-controls">
+            <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+            <button (click)="nextPage()" [disabled]="currentPage === totalPages">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,235 @@
+@import '../../../../style/variables';
+@import '../../../../style/typography';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  flex: 0 0 auto; 
+  width: 250px; 
+  height: 100vh; 
+}
+
+.main-content {
+  flex: 1 1 auto; 
+  padding: 20px; 
+  background-color: #F4F7FE;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+button {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out; 
+    width: fit-content;
+    padding: 6px 20px;
+    border-radius: 100px;
+    border: none;
+    color: $dark-teal;
+  }
+  button:hover {
+    transform: translateY(-5px);
+    color: white;
+  }
+  
+  
+  button.primary {
+    background-color: $light-turtoise; 
+  
+    &:hover {
+      background-color: darken($light-turtoise, 10%); 
+    }
+  
+    &:active {
+      background-color: darken($light-turtoise, 20%); 
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.secondary {
+    background-color: white; 
+    border: 1px solid $dark-teal;
+  
+    &:hover {
+      background-color: darken(white, 20%); 
+      border: 1px solid darken(white, 20%);
+    }
+  
+    &:active {
+      background-color: darken(white, 50%);  
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.approve{
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+  }
+  
+  button.reject{
+      background-color: #F44336;
+      color: white;
+      border: none;
+  }
+.color-1{
+  color: $light-turtoise;
+}
+.color-2{
+  color: $dark-teal;
+}
+.w-30{
+  width: 30%;
+}
+.curent_page{
+    @include font-h3-extra-bold;
+  }
+  .search-container {
+    display: flex;
+    position: fixed;
+    top: 24px;
+    right: 8px;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 4px 8px;
+    width: 568px; 
+    height: 48px;
+    margin-left: auto;
+    
+  }
+  
+  
+  .input-wrapper {
+    position: relative;
+    flex-grow: 1;
+    margin-right: 20px; /* Space between input and avatar */
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px; /* Adjust as needed */
+  }
+  
+  .search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #F4F7FE; 
+    border-radius: 20px; 
+    padding: 5px 8px 5px 40px; 
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px; 
+    border-radius: 50%; /* Make avatar round */
+  }
+  
+  .search-input::placeholder { color: #ccc; }
+  .search-input:focus {
+    background-color: #F4F7FE; 
+  }
+  .detail_job{
+    padding: 0px 12px;
+    width: 60%;
+    .author{
+        margin-bottom: 12px;
+        .author-ava{
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+        .name{
+            @include font-large-normal;
+        }
+        .time{
+            @include font-regular-normal;
+        }
+    }
+    .title{
+        @include font-h5-extra-bold;
+        margin-bottom: 12px;
+
+    }
+    .poster{
+        width: 620px;
+        height: 500px;
+        margin-bottom: 12px;
+        
+
+    }
+    .tag{
+        background-color: $light-turtoise;
+        border-radius: 20px;
+        margin-bottom: 12px;
+        padding: 16px 24px;
+        @include font-large-normal;
+    }
+    .content{
+        .title{
+            @include font-h5-extra-bold;
+
+        }
+        .sub-title{
+            @include font-h6-extra-bold;
+            margin-top: 4px;
+        }
+        .context{
+            @include font-medium-normal;
+            margin-bottom: 4px;
+        }
+
+
+
+    }
+
+}
+.company{
+  width: 30%;
+  height: fit-content;
+  border: 1px solid $dark-teal;
+  border-radius: 20px;
+  padding: 20px 12px;
+  .company-logo{
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+  }
+  .company-name{
+      @include font-h5-extra-bold;
+      margin-bottom: 16px;
+
+  }
+  .company-details{
+      @include font-medium-normal;
+      margin-bottom: 16px;
+
+  }
+  .company-infor{
+
+      @include font-h6-extra-bold;
+      margin-bottom: 16px;
+
+      .phone{
+          @include font-regular-normal;
+      }
+      .email{
+          @include font-regular-normal;
+      }
+  }
+}
+
+
+

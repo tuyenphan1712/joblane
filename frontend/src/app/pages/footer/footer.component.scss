@@ -1,0 +1,78 @@
+@import '../../../style/variables';
+@import '../../../style/typography';
+body{
+    font-family: $font-default;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+
+#colored-span{
+    display: block;
+    background-color: $light-turtoise; 
+    width: 100%;
+    height: 20px;
+}
+
+.form-control{
+  width: 80%;
+}
+
+.list-unstyled{
+    text-align: left;
+}
+.footer-sub{
+    @include font-small-normal;
+    text-decoration: none;
+    color: black;
+}
+
+//Button
+button {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out; 
+    width: fit-content;
+    padding: 5px 20px;
+    border-radius: 100px;
+    border: none;
+    @include font-large-medium;
+    color: $dark-teal;
+
+      &:hover {
+        transform: translateY(-5px);
+        color: white;
+    }
+  }
+
+  button.primary {
+    background-color: $light-turtoise; 
+    border: $light-turtoise;
+  
+    &:hover {
+      background-color: darken($light-turtoise, 10%); 
+      border: darken($light-turtoise, 10%);
+    }
+  
+    &:active {
+      background-color: darken($light-turtoise, 20%); 
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.secondary {
+    background-color: white; 
+    border: 1px solid $dark-teal;
+  
+    &:hover {
+      background-color: darken(white, 20%); 
+      border: 1px solid darken(white, 20%);
+    }
+  
+    &:active {
+      background-color: darken(white, 50%);  
+      transform: translateY(2px); 
+    }
+  }
+  

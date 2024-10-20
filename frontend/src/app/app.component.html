@@ -1,0 +1,9 @@
+<ng-container *ngIf="userRole === 'Jobseeker'; else employerHeader">
+    <app-header></app-header>
+  </ng-container>
+  <ng-template #employerHeader>
+    <app-header-employer></app-header-employer>
+  </ng-template>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  

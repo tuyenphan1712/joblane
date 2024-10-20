@@ -1,0 +1,341 @@
+@import '../../../style/variables';
+@import '../../../style/typography';
+body{
+    font-family: $font-default;
+    background-color: white;
+    color: $dark-teal;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden;
+}
+
+button {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out; 
+    width: fit-content;
+    padding: 12px 24px;
+    border-radius: 100px;
+    border: none;
+    @include font-large-medium;
+    color: $dark-teal;
+  }
+button:hover {
+    transform: translateY(-5px);
+    color: white;
+}
+  
+  button.primary {
+    background-color: $light-turtoise; 
+  
+    &:hover {
+      background-color: darken($light-turtoise, 10%); 
+    }
+  
+    &:active {
+      background-color: darken($light-turtoise, 20%); 
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.secondary {
+    background-color: white; 
+    border: 1px solid $white;
+  
+    &:hover {
+      background-color: darken(white, 20%); 
+      border: 1px solid darken(white, 20%);
+    }
+  
+    &:active {
+      background-color: darken(white, 50%);  
+      transform: translateY(2px); 
+    }
+  }
+.section{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    padding: 0px 32px;
+}
+.title-section{
+    @include font-h2-extra-bold;
+    margin-bottom: 12px;
+}
+.w-30{
+    width: 30%;
+}
+.color-1{
+    color: $light-turtoise;
+}
+.color-2{
+    color: $dark-teal;
+}
+.background-div {
+    background-image: url('/assets/img/bg_search.svg');
+    background-size: cover;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+    min-height: 300px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    max-width: 100%; 
+}
+.title-bg{
+    @include font-h1-extra-bold;
+    background-color: $light-turtoise;
+    opacity: 0.8;
+    width: fit-content;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 32px 64px -12px rgba(0, 0, 0, 0.14);
+    padding: 4px 17px 0px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 30px; 
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-divider {
+    border-left: 3px solid $dark-teal; 
+    height: 40px; 
+    align-self: center; 
+    }
+
+.search-input, .search-select {
+    background-color: transparent; 
+    border: none; 
+    box-shadow: none; 
+}
+
+.search-input:focus, .search-select:focus {
+    background-color: transparent; 
+    border: none;
+    box-shadow: none;
+    outline: none; 
+}
+
+
+.search-input:first-child, .search-select:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.input-group > .form-control, .input-group > .custom-select, .input-group > .input-group-append > .btn {
+    border: none;
+}
+.form-control{
+    @include font-h6-extra-bold;
+}
+.custom-select{
+    @include font-h6-extra-bold;
+}
+.search-button{
+    @include font-large-medium;
+}
+.image{
+  height: 300px;
+  margin-bottom: 20px;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.recent-jobs{
+    align-items: center;
+}
+.title{
+    @include font-h5-extra-bold;
+}
+.sub-title{
+    @include font-regular-normal;
+}
+.recent-jobs-item{
+    width: 450px;
+}
+.recent-jobs-item.a{
+    word-wrap: break-word;
+}
+.recent-jobs-item button{
+    padding: 4px 16px;
+}
+.recent-jobs-tag{
+    @include font-small-semi-bold;
+
+}
+
+.badge {
+    display: inline; 
+    background-color: $light-turtoise;
+    @include font-small-semi-bold;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin-right: 12px;
+    color: $dark-teal;
+}
+.location, .job-type {
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: 0.25rem;
+    }
+    span {
+        display: inline-block;
+        line-height: 1; 
+    }
+}
+.form-group{
+    margin-top: 24px;
+}
+
+//=======================JOB CATE=====================//
+#view-all{
+    padding: s 24px;   
+}
+.job-cate-item{
+    border: 2px solid $light-turtoise;
+    border-radius: 20px; 
+    margin: 12px;
+    width: 440px; 
+    height: 240px;
+    text-decoration: none;
+    color: $dark-teal;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow */
+    text-align: left; 
+    background: $white; 
+    margin-bottom: 24px; 
+}
+.icon-cate{
+    width: 85px;
+    height: 85px;
+}
+.job-name{
+    @include font-h2-extra-bold;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    width: 320px; 
+}
+
+.job-cate-item:hover {
+    text-decoration: none; 
+    color: darken($light-turtoise, 10%); 
+}
+.detail{
+    @include font-large-normal
+}
+ //--------------------------HOW IT WORK--------------------///
+
+.work-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    .sub-title{
+        word-wrap: break-word;
+        white-space: normal;
+        width: 200px; 
+        overflow-wrap: break-word;
+        text-align: center;
+        @include font-regular-normal
+    }
+    .title{
+        @include font-h5-extra-bold;
+    }
+
+ }
+ .center-text{
+    text-align: center;
+ }
+
+ //========================DEVELOP===============//
+.bg-sec{
+    background-image: url('/assets/img/bg-sec.svg');
+    background-size: cover;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
+    min-height: 300px;
+    padding: 50px;
+    width: 100%; 
+    max-width: 100%; 
+    color: $white;
+    .title{
+        word-wrap: break-word;
+        white-space: normal;
+        width: 200px; 
+        overflow-wrap: break-word;
+        @include font-h2-extra-bold
+        
+    }
+    .sub-title{
+        @include font-medium-semi-bold;
+        .button-secondary{
+            width: fit-content;
+        }
+    }
+}
+
+#sign-up{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    margin-right: 16px;
+}
+
+
+//===================REVIEW============//
+.customer{
+    margin-bottom: 30px;
+}
+.customer-item{
+    border: 1px solid $dark-teal;
+    padding: 20px;
+    width: 412px;
+    margin-bottom: 24px;
+}
+.customer-cmt{
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+    @include font-medium-normal;
+    width: 340px;
+}
+.rating {
+    font-size: 24px;
+    color: $light-turtoise; 
+}
+
+.star {
+    cursor: pointer;
+}
+.customer-name{
+    @include font-regular-semi-bold;
+}
+.customer-details{
+    @include font-regular-normal;
+}
+.small-title{
+    text-align: center;
+    @include font-large-bold;
+    margin: 20px;
+}
+.customer-photo{
+    margin-right: 16px;
+}
+

@@ -1,0 +1,125 @@
+<div class="wrapper d-flex flex-row">
+    <div class="sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="main-content">
+      <div class="container d-flex flex-column">
+        <div class="top d-flex justify-content-between align-items-center">
+          <span class="h4">Job Post</span>
+          <div class="search-container">
+            <div class="input-wrapper">
+              <img src="/assets/icons/Search.svg" alt="Search" class="search-icon">
+              <input type="text" class="search-input" placeholder="Search" [(ngModel)]="searchTerm">
+            </div>
+            <img src="/assets/img/Avatar.png" alt="User" class="user-avatar">
+          </div>
+        </div>
+        <div class="tab-container">
+          <ul class="tabs">
+            <li (click)="selectTab('pending')" [class.active]="selectedTab === 'pending'">Pending Approval</li>
+            <li (click)="selectTab('approved')" [class.active]="selectedTab === 'approved'">Approved Post</li>
+            <li (click)="selectTab('rejected')" [class.active]="selectedTab === 'rejected'">Rejected Post</li>
+          </ul>
+          <div class="tab-content" *ngIf="selectedTab === 'pending'">
+            <div class="table-container flex-grow-1">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="rounded-top-left">Post Title</th>
+                    <th>Employers</th>
+                    <th>Submission Date</th>
+                    <th>Categories</th>
+                    <th class="rounded-top-right">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let post of paginatedPendingPosts">
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.employer }}</td>
+                    <td>{{ post.submissionDate }}</td>
+                    <td>{{ post.categories }}</td>
+                    <td class="d-flex justify-content-start">
+                        <button class="approve secondary">Approve</button>
+                        <button class="reject secondary mx-2">Reject</button>
+                        <button class="primary d-flex align-items-center">
+                            View 
+                            <img src="assets/icons/Chevron Right.svg" alt="">
+                        </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-content" *ngIf="selectedTab === 'approved'">
+            <div class="table-container flex-grow-1">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="rounded-top-left">Post Title</th>
+                    <th>Employers</th>
+                    <th>Submission Date</th>
+                    <th>Categories</th>
+                    <th class="rounded-top-right">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let post of paginatedApprovedPosts">
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.employer }}</td>
+                    <td>{{ post.submissionDate }}</td>
+                    <td>{{ post.categories }}</td>
+                    <td class="d-flex justify-content-start">
+                      <button class="primary d-flex align-items-center">View <img src="assets/icons/Chevron Right.svg" alt=""></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-content" *ngIf="selectedTab === 'rejected'">
+            <div class="table-container flex-grow-1">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="rounded-top-left">Post Title</th>
+                    <th>Employers</th>
+                    <th>Submission Date</th>
+                    <th>Categories</th>
+                    <th class="rounded-top-right">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let post of paginatedRejectedPosts">
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.employer }}</td>
+                    <td>{{ post.submissionDate }}</td>
+                    <td>{{ post.categories }}</td>
+                    <td class="d-flex justify-content-start">
+                      <button class="primary d-flex align-items-center">View <img src="assets/icons/Chevron Right.svg" alt=""></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="table-control d-inline-flex justify-content-start align-items-center mt-auto">
+          <div class="rows-per-page d-inline-flex">
+            <label for="rows" class="align-self-center">Rows per page:</label>
+            <select id="rows" name="rows" [(ngModel)]="rowsPerPage" (change)="onRowsPerPageChange()">
+              <option *ngFor="let option of rowsOptions" [value]="option">{{ option }}</option>
+            </select>
+          </div>
+          <div class="pagination-info">
+            {{currentPage}}/{{totalPages}}
+          </div>
+          <div class="pagination-controls">
+            <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+            <button (click)="nextPage()" [disabled]="currentPage === totalPages">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,78 @@
+@import '../../../style/variables';
+@import '../../../style/typography';
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: $font-default;
+    background-color: white;
+    color: $dark-teal;
+}
+.w-30 {
+    width: 30%;
+}
+.top img{
+    width: 104px;
+    height: 104px;
+}
+
+.top h1{
+    @include font-h2-extra-bold;
+}
+.top p{
+    @include font-h4-extra-bold;
+}
+.mt-6{
+    margin-top: 6rem;
+}
+
+
+//Button
+button {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out; 
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    @include font-large-medium;
+    color: $dark-teal;
+  }
+button:hover {
+    transform: translateY(-5px);
+    color: white;
+}
+  
+  button.primary {
+    background-color: $light-turtoise; 
+  
+    &:hover {
+      background-color: darken($light-turtoise, 10%); 
+    }
+  
+    &:active {
+      background-color: darken($light-turtoise, 20%); 
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.secondary {
+    background-color: white; 
+    border: 1px solid $dark-teal;
+  
+    &:hover {
+      background-color: darken(white, 20%); 
+      border: 1px solid darken(white, 20%);
+    }
+  
+    &:active {
+      background-color: darken(white, 50%);  
+      transform: translateY(2px); 
+    }
+  }
+  

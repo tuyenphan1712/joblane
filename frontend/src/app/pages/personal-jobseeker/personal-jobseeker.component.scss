@@ -1,0 +1,145 @@
+@import '../../../style/variables';
+@import '../../../style/typography';
+body{
+    font-family: $font-default;
+    background-color: white;
+}
+.w-30 {
+    width: 30%;
+}
+
+.top img{
+    width: 104px;
+    height: 104px;
+}
+
+.form-check-input {
+  border: 1px solid $dark-teal;
+}
+.form-check-input:checked {
+  background-color: $light-turtoise;
+  border: 1px solid $light-turtoise;
+}
+
+.form-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.top h1{
+    @include font-h2-extra-bold;
+}
+.top p{
+    @include font-medium-normal;
+}
+.form-group label{
+    @include font-medium-normal;
+}
+.form-check-label{
+    @include font-medium-medium;
+}
+a{
+  text-decoration: none;
+  color: $dark-teal;
+}
+a:hover{
+    color: $light-turtoise;
+}
+.form-control{
+  margin-top: 3px;
+  height: 48px;
+  border: 1px solid $dark-teal; 
+  border-radius: 10px;
+  outline: none; 
+}
+
+//Google button
+.google-btn img{
+
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+.google-btn {
+  @include font-large-medium;
+}
+
+//Button
+button {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out; 
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    @include font-large-medium;
+    color: $dark-teal;
+  }
+button:hover {
+    transform: translateY(-5px);
+    color: white;
+}
+  
+  button.primary {
+    background-color: $light-turtoise; 
+  
+    &:hover {
+      background-color: darken($light-turtoise, 10%); 
+    }
+  
+    &:active {
+      background-color: darken($light-turtoise, 20%); 
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.secondary {
+    background-color: white; 
+    border: 1px solid $dark-teal;
+  
+    &:hover {
+      background-color: darken(white, 20%); 
+      border: 1px solid darken(white, 20%);
+    }
+  
+    &:active {
+      background-color: darken(white, 50%);  
+      transform: translateY(2px); 
+    }
+  }
+  
+  
+  
+  // Divider 
+  .divider-container .line {
+    flex-grow: 1;
+    background: #8D8D8D; 
+    height: 1px; 
+    top: 0.5em; 
+  }
+  
+  .divider-container .text {
+    padding: 0 10px; 
+    color: #8D8D8D;
+    @include font-large-medium;
+
+  }
+  .text{
+    @include font-medium-medium;
+  }
+  .title{
+    @include font-h4-extra-bold;
+  }
+  .sub-title{
+    @include font-medium-medium;
+  }
+  .img{
+    border: 5px solid $light-turtoise;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+}
+input[type="file"] {
+    display: none;
+}

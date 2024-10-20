@@ -1,0 +1,154 @@
+<body>
+    <div class="background-div">
+        <div class="container-fluid">
+            <div class="search-bar row mt-5">
+                <div class="col search-container">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="assets/icons/Work.svg" alt="Job Icon"></span>
+                        </div>
+                        <input type="text" class="form-control search-input" placeholder="Job Title"
+                            aria-label="Job Title">
+
+                        <div class="search-divider"></div>
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="assets/icons/Pin.svg" alt="Location Icon"></span>
+                        </div>
+                        <select class="custom-select search-select" id="locationDropdown">
+                            <option selected>Location</option>
+                        </select>
+
+                        <div class="search-divider"></div>
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="assets/icons/Category.svg"
+                                    alt="Category Icon"></span>
+                        </div>
+                        <select class="custom-select search-select" id="categoriesDropdown">
+                            <option selected>Categories</option>
+                        </select>
+                    </div>
+                    <button class="d-flex search-button align-items-center">
+                        <img src="assets/icons/Search.svg" alt="search" class="mr-2">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-column">
+        <div class="container-non-bor">
+            <div>
+                
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="container-bor w-75">
+                <div class="h4 mb-3">
+                    <span class="color-1">Company </span>
+                    <span class="color-2">Profile</span>
+                </div>
+                <h5 class="my-2">AEON Việt Nam</h5>
+                <div class="content my-3">
+                    Công ty Cổ phần Smilee Việt Nam được thành lập vào ngày 08/10/2018 mục tiêu trở thành công ty về các
+                    nhãn hiệu chăm sóc sức khoẻ số 1 Đông Nam Á.<br>
+                     Năm 2019, Smilee vinh dự được bộ Khoa học & Công nghệ đầu tư, nhận giải thưởng Top Startup cuộc thi
+                    khởi nghiệp toàn cầu VietChallenge và Giải nhất cuộc thi WISE - Sáng kiến hỗ trợ Phụ nữ Khởi nghiệp
+                    và Kinh doanh năm 2019.<br>
+                      06 giá trị cốt lõi tại Smilee Việt Nam<br>
+                     1. Học hỏi và cải tiến không ngừng<br>
+                     Luôn cởi mở, tiếp thu ý kiến đóng góp và cập nhật kiến thức liên tục không có điểm dừng<br>
+                     2. Kỷ luật thép<br>
+                     Lời nói và hành động luôn thống nhất với mục tiêu đặt ra, không để mục tiêu bị ảnh hưởng bởi bất kỳ
+                    yếu tố nào<br>
+                     3. Ngay thẳng - thẳng thắn<br>
+                     Sẵn sàng làm điều khó nhưng đúng đắn<br>
+                     4. Trách nhiệm cao - Quyết liệt<br>
+                     Tận tâm, tận tình, có trách nhiệm với công việc và quyết tâm hoàn thành mục tiêu đã đặt ra<br>
+                     5. Luôn vị mục tiêu chung<br>
+                     Luôn hành động vì mục tiêu chung, không dựa trên mục tiêu cá nhân nào khác<br>
+                     6. Tiêu chuẩn cao<br>
+                     Luôn so sánh với những cá nhân xuất sắc nhất trong lĩnh vực đang làm<br>
+                </div>
+            </div>
+            <div class="container-bor w-25">
+                <div class="h4 mb-3">
+                    <span class="color-1">Contact </span>
+                    <span class="color-2">Info</span>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="info d-flex align-items-center">
+                        <img src="/assets/icons/Pin.svg" alt="address">
+                        Company Location
+                    </div>
+                    <p>123 Ton That Dam, Phuong 2, Quan 1, TP HCM</p>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="info d-flex align-items-center">
+                        <img src="/assets/icons/envelope-open.png" alt="email">
+                        Email
+                    </div>
+                    <p>123gmail.com</p>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="info d-flex align-items-center">
+                        <img src="/assets/icons/phone-rotary.png" alt="phone number">
+                        Phone Number
+                    </div>
+                    <p>09778783683</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="container-bor w-75">
+                <div class="h4 mb-3">
+                    <span class="color-1">Hiring </span>
+                    <span class="color-2">Jobs</span>
+                </div>
+                <div class="result-list-slider">
+                    <div class="result-item d-flex justify-content-around" *ngFor="let item of items">
+                      <img src="assets/img/Logo/Company_TuDo.svg" alt="logo">
+                      <div class="infor d-inline-flex align-items-start flex-column">
+                        <div class="job-name">
+                          Specialist Digital Marketing/Content Marketing
+                        </div>
+                        <div class="company">
+                          Công ty TNHH TuDo
+                        </div>
+                        <div class="mt-auto tag d-flex align-items-start">
+                          <div class="location">
+                            Ho Chi Minh
+                          </div>
+                          <div class="time">
+                            30 days left to apply
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action d-inline-flex align-items-end flex-column">
+                        <div class="mb-auto salary">Up to 12M VND</div>
+                        <div class="d-flex align-items-center">
+                          <label class="bookmark-btn mr-3">
+                            <input type="checkbox" class="bookmark-checkbox" id="bookmarkToggle" />
+                            <span class="bookmark-icon mx-2" id="bookmarkIcon">
+                              <img src="assets/icons/Save_Inactive.svg" alt="Bookmark" />
+                            </span>
+                          </label>
+                          <button type="submit" class="primary ms-auto">
+                            Apply Now
+                            <img src="assets/icons/Chevron Right.svg" alt="arrow">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        
+
+    </div>
+
+</body>

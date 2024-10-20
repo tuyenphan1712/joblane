@@ -1,0 +1,363 @@
+<body>
+    <div class="background-div">
+        <div class="container-fluid">
+            <div class="title-bg d-flex justify-content-center row mb-5">Your Journey to the Right Job!</div>
+            <div class="search-bar row mt-5">
+                <form class="col search-container" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+                    <div class="input-group">
+                        <input type="text" formControlName="title" class="form-control search-input" placeholder="Job Title" aria-label="Job Title">
+                        
+                        <div class="search-divider"></div>
+
+                        <select class="custom-select search-select w-30 mx-3" formControlName="location" id="locationDropdown">
+                            <option selected>Location</option>
+                            <option *ngFor="let location of locations" [value]="location">{{ location }}</option>
+                        </select>
+
+                        <div class="search-divider"></div>
+
+                        <select class="custom-select search-select w-30 mx-3" formControlName="category" id="categoriesDropdown">
+                            <option selected>Categories</option>
+                            <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="primary d-flex align-items-center">
+                        <img src="/assets/icons/Search.svg" alt="search" >
+                        <span class="ml-3">Search</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="title-section">
+            <span class="color-2">Recent </span>
+            <span class="color-1">Active </span>
+            <span class="color-2">Listed Jobs</span>
+        </div>
+        <div class="recent-jobs d-flex justify-content-around mb-5">
+            <div class="recent-jobs-item">
+                <div class="image mb-3">
+                    <img src="/assets/img/recent_job_1.svg" alt="RJ1">
+                </div>
+                <div class="d-flex justify-content-start recent-jobs-tag ml-auto mb-3">
+                        <div class="badge mr-3">
+                            <span>Jobs</span>
+                        </div>
+                        <div class="location mx-3">
+                            <img src="/assets/icons/Pin.svg" alt="location">
+                            <span>Ho Chi Minh</span>
+                        </div>
+                        <div class="job-type">
+                            <img src="/assets/icons/Clock.svg" alt="type">
+                            <span>Full time</span>
+                        </div>
+                    
+                </div> 
+                <div class="recent-jobs-title mb-3">
+                    <div class="title">Web/Application Figma Designer </div>
+                    <a>Join our team as a Web/Application Designer and shape the future of digital reading experiences.</a>
+                </div>
+                
+                <button type="submit" class="primary">
+                    Apply Now
+                    <img src="/assets/icons/Chevron Right.svg" alt="arrow">
+                </button> 
+            </div>
+            <div class="recent-jobs-item">
+                <div class="image mb-3">
+                    <img src="/assets/img/recent_job_1.svg" alt="RJ1">
+                </div>
+                <div class="d-flex justify-content-start recent-jobs-tag ml-auto mb-3">
+                        <div class="badge mr-3">
+                            <span>Jobs</span>
+                        </div>
+                        <div class="location mx-3">
+                            <img src="/assets/icons/Pin.svg" alt="location">
+                            <span>Ho Chi Minh</span>
+                        </div>
+                        <div class="job-type">
+                            <img src="/assets/icons/Clock.svg" alt="type">
+                            <span>Full time</span>
+                        </div>
+                    
+                </div> 
+                <div class="recent-jobs-title mb-3">
+                    <div class="title">Web/Application Figma Designer </div>
+                    <a>Join our team as a Web/Application Designer and shape the future of digital reading experiences.</a>
+                </div>
+                
+                <button type="submit" class="primary">
+                    Apply Now
+                    <img src="/assets/icons/Chevron Right.svg" alt="arrow">
+                </button> 
+            </div>
+            <div class="recent-jobs-item">
+                <div class="image mb-3">
+                    <img src="/assets/img/recent_job_1.svg" alt="RJ1">
+                </div>
+                <div class="d-flex justify-content-start recent-jobs-tag ml-auto mb-3">
+                        <div class="badge mr-3">
+                            <span>Jobs</span>
+                        </div>
+                        <div class="location mx-3">
+                            <img src="/assets/icons/Pin.svg" alt="location">
+                            <span>Ho Chi Minh</span>
+                        </div>
+                        <div class="job-type">
+                            <img src="/assets/icons/Clock.svg" alt="type">
+                            <span>Full time</span>
+                        </div>
+                    
+                </div> 
+                <div class="recent-jobs-title mb-3">
+                    <div class="title">Web/Application Figma Designer </div>
+                    <a>Join our team as a Web/Application Designer and shape the future of digital reading experiences.</a>
+                </div>
+                
+                <button type="submit" class="primary">
+                    Apply Now
+                    <img src="/assets/icons/Chevron Right.svg" alt="arrow">
+                </button> 
+            </div>
+            
+        </div>
+    </div>
+    <div class="section">
+        <div class="title-section d-flex justify-content-between">
+            <div>
+                <span class="color-2">Job </span>
+                <span class="color-1 ml-2">Categories</span>
+            </div>
+            <button class="ml-auto primary" id="view-all">
+                View all
+            </button>
+        </div>
+        <div class="job-cate d-flex flex-wrap mb-5">
+            
+            <a href="/job/alljob" class="job-cate-item d-flex align-items-start flex-column">
+                <div class="p-2 icon-cate">
+                    <img src="/assets/img/Cate/Accounting.svg" alt="Icon">
+                </div>
+                <div class="p-2 job-name">
+                    Accounting
+                </div>
+                <div class="p-2 detail">
+                    <span class="num">75+</span>
+                    <span>Available Jobs</span>
+                </div>
+            </a>
+            <a href="/job/alljob" class="job-cate-item d-flex align-items-start flex-column">
+                <div class="p-2 icon-cate">
+                    <img src="/assets/img/Cate/BA.svg" alt="Icon">
+                </div>
+                <div class="p-2 job-name">
+                    BA
+                </div>
+                <div class="p-2 detail">
+                    <span class="num">75+</span>
+                    <span>Available Jobs</span>
+                </div>
+            </a>
+            <a href="/job/alljob" class="job-cate-item d-flex align-items-start flex-column">
+                <div class="p-2 icon-cate">
+                    <img src="/assets/img/Cate/Broadcasting.svg" alt="Icon">
+                </div>
+                <div class="p-2 job-name">
+                    Broadcasting
+                </div>
+                <div class="p-2 detail">
+                    <span class="num">75+</span>
+                    <span>Available Jobs</span>
+                </div>
+            </a>
+            <a href="/job/alljob" class="job-cate-item d-flex align-items-start flex-column">
+                <div class="p-2 icon-cate">
+                    <img src="/assets/img/Cate/Design.svg" alt="Icon">
+                </div>
+                <div class="p-2 job-name">
+                    Design
+                </div>
+                <div class="p-2 detail">
+                    <span class="num">75+</span>
+                    <span>Available Jobs</span>
+                </div>
+            </a>
+            <a href="/job/alljob" class="job-cate-item d-flex align-items-start flex-column">
+                <div class="p-2 icon-cate">
+                    <img src="/assets/img/Cate/Translation.svg" alt="Icon">
+                </div>
+                <div class="p-2 job-name">
+                    Translation
+                </div>
+                <div class="p-2 detail">
+                    <span class="num">75+</span>
+                    <span>Available Jobs</span>
+                </div>
+            </a>
+            <div class="job-cate-item d-flex align-items-start flex-column">
+                
+                <div class="p-2 job-name">
+                    7.580+
+                </div>
+                <div class="p-2 detail">
+                    <span>Jobs are waiting for you</span>
+                </div>
+                <button type="submit" class="primary">
+                    Explore More
+                    <img src="/assets/icons/Chevron Right.svg" alt="arrow">
+                </button> 
+
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="title-section center-text" style="">
+            <span class="color-2">How it </span>
+            <span class="color-1">works</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="work-item">
+                <div class="icon">
+                    <img src="/assets/img/Work/image 32.png" alt="">
+                </div>
+                <div class="title">
+                    Create an Account
+                </div>
+                <div class="sub-title align-middle">
+                    "Your Gateway to Opportunities"<br>Begin your journey by registering an account to unlock a personalized job search experience.
+                </div>
+                
+            </div>
+            <div class="work-item">
+                <div class="icon">
+                    <img src="/assets/img/Work/image 31.png" alt="">
+                </div>
+                <div class="title">
+                    Seek for Jobs
+                </div>
+                <div class="sub-title align-middle">
+                    "Explore Your Potential"<br>Navigate through a diverse array of job listings to find positions that resonate with your skills and ambitions.
+                </div>
+                
+            </div>
+            <div class="work-item">
+                <div class="icon">
+                    <img src="/assets/img/Work/image 33.png" alt="">
+                </div>
+                <div class="title">
+                    Upload CV/Resume
+                </div>
+                <div class="sub-title align-middle">
+                    "Showcase Your Expertise"<br>Easily upload your resume and let your professional story be heard by potential employers.
+                </div>
+                
+            </div>
+            <div class="work-item">
+                <div class="icon">
+                    <img src="/assets/img/Work/image 34.png" alt="">
+                </div>
+                <div class="title">
+                    Get Hired
+                </div>
+                <div class="sub-title align-middle">
+                    "Embark on Your Career Path"<br>Connect with employers, receive job offers, and start the next chapter of your professional life.
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="section bg-sec">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col title">
+                Discover Your Dream Job with JobLane
+            </div>
+            <div class="col sub-title d-flex flex-column">
+                <div class="text">
+                    JobLane is the ultimate platform for job seekers to connect and succeed together.
+                </div>
+                <div class="d-flex justify-content-start align-items-center mt-3">
+                    <button class="secondary" id="sign-up">
+                        Sign up
+                    </button>
+                    <a href="#" style="color: white;">
+                        Explore
+                        <img src="/assets/icons/Chevron Right.svg" alt="link">
+                    </a>
+                </div>
+                
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="section">
+        <div class="title-section center-text" style="">
+            <span class="color-1">Review </span>
+            <span class="color-2">of Users</span>
+        </div>
+        <div class="customer d-flex justify-content-around">
+            <div class="customer-item">
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">☆</span> 
+            </div>
+        <blockquote class="customer-cmt">
+            "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."
+        </blockquote>
+        <div class="d-flex align-items-center">
+            <img src="/assets/img/Ava/Avatar Image-1.svg" alt="Customer Photo" class="customer-photo">
+            <div class="d-flex flex-column">
+                <div class="customer-name">Jenifer</div>
+                <div class="customer-details">Position, Company name</div>
+            </div>
+            
+        </div>
+            </div>
+            <div class="customer-item">
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span> 
+                </div>
+            <blockquote class="customer-cmt">
+                "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."
+            </blockquote>
+            <div class="d-flex align-items-center">
+                <img src="/assets/img/Ava/Avatar Image-1.svg" alt="Customer Photo" class="customer-photo">
+                <div class="d-flex flex-column">
+                    <div class="customer-name">Jenifer</div>
+                    <div class="customer-details">Position, Company name</div>
+                </div>
+                
+            </div>
+                </div><div class="customer-item">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">☆</span> 
+                    </div>
+                <blockquote class="customer-cmt">
+                    "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."
+                </blockquote>
+                <div class="d-flex align-items-center">
+                    <img src="/assets/img/Ava/Avatar Image-1.svg" alt="Customer Photo" class="customer-photo">
+                    <div class="d-flex flex-column">
+                        <div class="customer-name">Jenifer</div>
+                        <div class="customer-details">Position, Company name</div>
+                    </div>
+                    
+                </div>
+                    </div>
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+$font-default: 'Outfit', sans-serif;
+// Using :root in variables.scss or another global SCSS file
+:root {
+    --font-default: 'Outfit', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-default);
+  }
+  

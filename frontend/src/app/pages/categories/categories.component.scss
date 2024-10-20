@@ -1,0 +1,195 @@
+@import '../../../style/variables';
+@import '../../../style/typography';
+body{
+    font-family: $font-default;
+    background-color: white;
+    color: $dark-teal;
+    margin: 0; 
+    overflow-x: hidden;
+}
+button {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: all 0.2s ease-in-out; 
+    width: fit-content;
+    padding: 10px;
+    border-radius: 100px;
+    border: none;
+    @include font-large-medium;
+    color: $dark-teal;
+  }
+  button:hover {
+    transform: translateY(-5px);
+    color: white;
+  }
+  
+  button.primary {
+    background-color: $light-turtoise; 
+  
+    &:hover {
+      background-color: darken($light-turtoise, 10%); 
+    }
+  
+    &:active {
+      background-color: darken($light-turtoise, 20%); 
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.secondary {
+    background-color: white; 
+    border: 1px solid $dark-teal;
+  
+    &:hover {
+      background-color: darken(white, 20%); 
+      border: 1px solid darken(white, 20%);
+    }
+  
+    &:active {
+      background-color: darken(white, 50%);  
+      transform: translateY(2px); 
+    }
+  }
+.color-1{
+    color: $light-turtoise;
+  }
+.color-2{
+color: $dark-teal;
+}
+.h2{
+    @include font-h2-extra-bold;
+}
+.background-div {
+    background-image: url('/assets/img/BG2.svg');
+    background-size: cover;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 340px;
+    min-height: 300px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Set width to full viewport width */
+    max-width: 100%; /* Ensures it doesn't exceed the width of the viewport */
+}
+.search-button{
+    width: fit-content;
+}
+.title-bg{
+    @include font-h1-extra-bold;
+    background-color: $light-turtoise;
+    opacity: 0.8;
+    width: fit-content;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 32px 64px -12px rgba(0, 0, 0, 0.14);
+    padding: 4px 17px 0px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search-container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-divider {
+    border-left: 2px solid $dark-teal;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.search-input, .search-select, .input-group-text {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    flex-grow: 1;
+    outline: none;
+    color: $dark-teal;
+    padding: 0 10px;
+}
+.search-select {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    flex-grow: 1;
+    outline: none;
+    color: $dark-teal;
+    padding: 0 10px;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    background-image: none; 
+    position: relative;  
+}
+
+
+
+
+.search-button {
+    margin-left: auto;
+    border-radius: 30px;
+    background-color: $light-turtoise;
+    color: $dark-teal;
+    border: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($light-turtoise, 10%);
+    }
+
+    &:active {
+        background-color: darken($light-turtoise, 20%);
+    }
+}
+
+.section{
+    padding: 20px 44px;
+}
+.job-cate-item{
+    border: 2px solid $light-turtoise;
+    border-radius: 20px; 
+    margin: 12px;
+    width: 440px; 
+    height: 240px;
+    text-decoration: none;
+    color: $dark-teal;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow */
+    text-align: left; 
+    background: $white; 
+    margin-bottom: 24px; 
+}
+.icon-cate{
+    width: 85px;
+    height: 85px;
+}
+.job-name{
+    @include font-h2-extra-bold;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    width: 320px; 
+}
+
+.job-cate-item:hover {
+    text-decoration: none; 
+    color: darken($light-turtoise, 10%); 
+}
+.detail{
+    @include font-large-normal
+}
+
+

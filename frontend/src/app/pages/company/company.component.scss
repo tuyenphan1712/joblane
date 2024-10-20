@@ -1,0 +1,332 @@
+@import '../../../style/variables';
+@import '../../../style/typography';
+body{
+    font-family: $font-default;
+    background-color: white;
+    color: $dark-teal;
+    margin: 0; 
+    overflow-x: hidden;
+}
+button {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: all 0.2s ease-in-out; 
+    padding: 10px;
+    border-radius: 100px;
+    border: none;
+    @include font-large-medium;
+    color: $dark-teal;
+  }
+  button:hover {
+    transform: translateY(-5px);
+    color: white;
+  }
+  
+  button.primary {
+    background-color: $light-turtoise; 
+  
+    &:hover {
+      background-color: darken($light-turtoise, 10%); 
+    }
+  
+    &:active {
+      background-color: darken($light-turtoise, 20%); 
+      transform: translateY(2px); 
+    }
+  }
+  
+  button.secondary {
+    background-color: white; 
+    border: 1px solid $dark-teal;
+  
+    &:hover {
+      background-color: darken(white, 20%); 
+      border: 1px solid darken(white, 20%);
+    }
+  
+    &:active {
+      background-color: darken(white, 50%);  
+      transform: translateY(2px); 
+    }
+  }
+.color-1{
+    color: $light-turtoise;
+  }
+  .color-2{
+    color: $dark-teal;
+  }
+  
+.background-div {
+    background-image: url('/assets/img/BG2.svg');
+    background-size: cover;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 340px;
+    min-height: 300px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Set width to full viewport width */
+    max-width: 100%; /* Ensures it doesn't exceed the width of the viewport */
+}
+.search-button{
+    width: fit-content;
+}
+.title-bg{
+    @include font-h1-extra-bold;
+    background-color: $light-turtoise;
+    opacity: 0.8;
+    width: fit-content;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 32px 64px -12px rgba(0, 0, 0, 0.14);
+    padding: 4px 17px 0px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h4{
+    @include font-h4-extra-bold;
+}
+h5{
+    @include font-h5-extra-bold;
+}
+.content{
+    width: 100%;
+    @include font-medium-normal;
+    white-space: normal;
+
+}
+
+
+.search-container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-divider {
+    border-left: 2px solid $dark-teal;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.search-input, .search-select, .input-group-text {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    flex-grow: 1;
+    outline: none;
+    color: $dark-teal;
+    padding: 0 10px;
+}
+.search-select {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    flex-grow: 1;
+    outline: none;
+    color: $dark-teal;
+    padding: 0 10px;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    background-image: none; 
+    position: relative;  
+}
+
+
+
+
+.search-button {
+    margin-left: auto;
+    border-radius: 30px;
+    background-color: $light-turtoise;
+    color: $dark-teal;
+    border: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($light-turtoise, 10%);
+    }
+
+    &:active {
+        background-color: darken($light-turtoise, 20%);
+    }
+}
+
+
+.image{
+    height: 300px;
+    margin-bottom: 20px;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+.h6{
+    @include font-h6-extra-bold;
+}
+.text{
+    @include font-medium-normal;
+}
+
+
+hr {
+    border: none; 
+    height: 2px; 
+    background-color: $dark-teal; 
+    margin: 12px;
+  }
+ 
+.search-button{
+    background-color: $light-turtoise;
+    align-items: center;
+    justify-content: center;
+    color: $dark-teal;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 2px solid $light-turtoise;
+    @include font-large-medium;
+
+  }
+  .search-button:hover{
+    background-color: transparent;
+    color: $dark-teal;
+    border: 2px solid $light-turtoise;
+  }
+  .search-button img{
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+  }
+
+//============================================//
+.w-75{
+    width: 70%;
+
+}
+.w-25{
+    width: 20%;
+}
+.w-60{
+    width: 60%;
+}
+.container-bor{
+    border: 1px solid $light-turtoise;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 32px;
+
+}
+.container-non-bor{
+    background-image: url('/assets/img/company_bg.png');
+    background-size: cover;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;}
+.title{
+    @include font-h1-extra-bold;
+}
+.info{
+    @include font-large-bold;
+    margin-bottom: 8px;
+}
+.info img{
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+
+.result-item{
+    background-color: $white;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid $dark-teal;
+
+}
+
+.infor{
+    .job-name{
+        @include font-h5-extra-bold;
+    }
+    .company{
+        @include font-large-normal;
+    }
+
+}
+
+
+.tag{
+    .location{
+        @include font-medium-normal;
+        border-radius: 12px;
+        padding: 0px 12px;
+        background-color: $light-turtoise;
+        margin-right: 8px;
+    
+    }
+    .time{
+        @include font-medium-normal;
+        border-radius: 12px;
+        padding: 0px 12px;
+        background-color: $light-turtoise;
+    }
+
+}
+
+.salary{
+    @include font-large-semi-bold;
+    color: $light-turtoise;
+   
+}
+.bookmark-checkbox {
+    display: none;   
+    &:checked + .bookmark-icon img {
+      content: url('/assets/icons/Save_Active.svg'); 
+    }
+  }
+  
+  .bookmark-btn {
+    cursor: pointer;
+    display: inline-block;
+  
+    .bookmark-icon {
+      display: inline-block;
+      width: 48px; 
+      height: 48px; 
+  
+      img {
+        width: 100%;
+        height: auto;
+        transition: content 0.3s ease; 
+      }
+    }
+  }
+.result-list-slider {
+    .slick-slide {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+}
+
+  
+ 

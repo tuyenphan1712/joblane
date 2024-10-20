@@ -1,0 +1,56 @@
+
+<div class="top text-center mt-5">
+    <img src="assets/img/Logo/logo-01 1 (1).svg" class="custom-logo" alt="logo">
+    <h1>Sign Up</h1>
+    <p>Joblane - Your Journey to the Right Job!</p>
+</div>
+
+
+
+<form class="mb-5 w-30 mx-auto" id="login" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+           
+        <button class="secondary google-btn d-flex justify-content-center" type="submit">
+            <img class="my-auto" src="assets/img/Google.svg " alt="Google">
+            Log in with Google
+        </button>
+    </div>
+    <div class="divider-container d-flex align-items-center">
+        <div class="line"></div>
+        <span class="text">Or</span>
+        <div class="line"></div>
+    </div>
+    <div class="form-group mb-3">
+        <label for="exampleInputName1">Name</label>
+        <input type="text" class="form-control" formControlName="name" name="Name" id="Name">
+    </div>
+    <div class="form-group mb-3">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" formControlName="email" name="Email" id="Email">
+    </div>
+    <div class="form-group mb-3">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" formControlName="password" name="Password" id="Password">
+    </div>
+    <div class="form-group mb-3">
+        <label for="exampleInputPassword2">Confirm Password</label>
+        <input type="password" class="form-control" formControlName="confirmPassword" name="CPassword" id="CPassword">
+    </div>
+    <div class="form-group d-flex justify-content-between">
+        <div class="form-check mb-3">
+            <input type="checkbox" formControlName="agree" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">I agree with Terms and Privacy</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="primary" type="submit">Sign up</button>
+    </div>
+    
+        {{ message }}
+      
+    <div>
+        <span class="mr-3">Already have an account? </span>
+        <a onclick="location.href='/sign-in';"> Log in</a>
+    </div>
+    
+</form>

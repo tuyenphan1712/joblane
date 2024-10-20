@@ -1,0 +1,250 @@
+@import '../../../style/variables';
+@import '../../../style/typography';
+body{
+    font-family: $font-default;
+    background-color: white;
+    color: $dark-teal;
+    margin: 0; 
+    overflow-x: hidden;
+}
+.color-1{
+  color: $light-turtoise;
+}
+.color-2{
+  color: $dark-teal;
+}
+
+.breadcrumb {
+  list-style: none;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  padding: 0 4px;
+  color: $dark-teal; 
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: $dark-teal; 
+}
+
+.breadcrumb-item.active a {
+  color: $dark-teal; 
+}
+.green-bg{
+  background-color: rgba($light-turtoise, 0.27);
+  padding: 24px;
+  width: 1080px;
+  border-radius: 20px;
+}
+
+.result-item{
+    background-color: $white;
+    border-radius: 20px;
+    padding: 32px;
+    margin-top: 20px;
+
+}
+
+.infor{
+    .job-name{
+        @include font-h5-extra-bold;
+    }
+    .company{
+        @include font-large-normal;
+    }
+
+}
+
+.action{
+  button{
+    width: 180px;
+  }
+}
+.tag{
+    .location{
+        @include font-medium-normal;
+        border-radius: 12px;
+        padding: 0px 12px;
+        background-color: $light-turtoise;
+        margin-right: 8px;
+    
+    }
+    .time{
+        @include font-medium-normal;
+        border-radius: 12px;
+        padding: 0px 12px;
+        background-color: $light-turtoise;
+    }
+
+}
+
+.salary{
+    @include font-large-semi-bold;
+    color: $light-turtoise;
+   
+}
+.bookmark-checkbox {
+    display: none;   
+    &:checked + .bookmark-icon img {
+      content: url('/assets/icons/Save_Active.svg'); 
+    }
+  }
+  
+  .bookmark-btn {
+    cursor: pointer;
+    display: inline-block;
+  
+    .bookmark-icon {
+      display: inline-block;
+      width: 48px; 
+      height: 48px; 
+  
+      img {
+        width: 100%;
+        height: auto;
+        transition: content 0.3s ease; 
+      }
+    }
+  }
+
+.recommend{
+    padding: 8px;
+    .rec-job-item{
+      text-decoration: none;
+      color: $dark-teal;
+    }
+    .rec-job-logo{
+      width: 300px;
+      height: auto;
+    }
+    .rec-job-name{
+      word-wrap: break-word;
+      white-space: normal;
+      overflow-wrap: break-word;
+      text-align: left;
+      @include font-large-bold;
+      width: 280px;
+      margin: 12px;
+    }
+    .rec-job-info{
+      margin-top: 8px;
+    }
+
+}
+.h6{
+  @include font-h6-extra-bold;
+}
+.h4{
+  @include font-h4-extra-bold;
+}
+hr {
+  border: none; 
+  height: 2px; 
+  background-color: $dark-teal; 
+  margin: 12px;
+}
+.sort{
+    .sub-section-title{
+    @include font-h5-extra-bold;
+    margin-right: 12px;
+    }
+
+  input[type="radio"]{
+    display: none;
+  }
+  label{
+    position: relative;
+    color: $dark-teal;
+    border: 2px solid $light-turtoise;
+    border-radius: 20px;
+    margin-right: 12px;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include font-large-medium;
+  }
+  label::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 2px solid $light-turtoise;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  input[type="radio"]:checked + label{
+    background-color: $light-turtoise;
+    color: $dark-teal;
+  }
+  input[type="radio"]:checked + label::before{
+    height: 18px;
+    width: 18px;
+    border: 3px solid $white;
+    background-color: $light-turtoise;
+  }
+}
+
+.result-list-slider {
+  .slick-slide {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+}
+
+
+button {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease-in-out; 
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  @include font-large-medium;
+  color: $dark-teal;
+}
+button:hover {
+  transform: translateY(-5px);
+  color: white;
+}
+
+button.primary {
+  background-color: $light-turtoise; 
+
+  &:hover {
+    background-color: darken($light-turtoise, 10%); 
+  }
+
+  &:active {
+    background-color: darken($light-turtoise, 20%); 
+    transform: translateY(2px); 
+  }
+}
+
+button.secondary {
+  background-color: white; 
+  border: 1px solid $dark-teal;
+
+  &:hover {
+    background-color: darken(white, 20%); 
+    border: 1px solid darken(white, 20%);
+  }
+
+  &:active {
+    background-color: darken(white, 50%);  
+    transform: translateY(2px); 
+  }
+}
+#job-post{
+  margin-right: 20px;
+  width: 100px;
+  height: 100%;
+
+}

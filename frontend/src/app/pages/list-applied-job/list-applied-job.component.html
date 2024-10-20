@@ -1,0 +1,95 @@
+
+<div class="background-div">
+    <div class="container-fluid">
+        <div class="search-bar row mt-5">
+            <div class="col search-container">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><img src="assets/icons/Work.svg" alt="Job Icon"></span>
+                    </div>
+                    <input type="text" class="form-control search-input" placeholder="Job Title" aria-label="Job Title">
+                    
+                    <div class="search-divider"></div>
+                    
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><img src="assets/icons/Pin.svg" alt="Location Icon"></span>
+                    </div>
+                    <select class="custom-select search-select" id="locationDropdown">
+                        <option selected>Location</option>
+                    </select>
+                    
+                    <div class="search-divider"></div>
+                    
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><img src="assets/icons/Category.svg" alt="Category Icon"></span>
+                    </div>
+                    <select class="custom-select search-select" id="categoriesDropdown">
+                        <option selected>Categories</option>
+                    </select>
+                </div>
+                <button class="d-flex search-button align-items-center">
+                    <img src="assets/icons/Search.svg" alt="search" class="mr-2">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <p class="mt-5 mb-3 h4">Hi Jobseeker!</p>
+    <p class="my-2">You can follow your Applied Jobs</p>
+    <div class="d-flex">
+        <div class="applied-list" *ngFor="let post of appliedPosts">
+            <a class="list-item d-flex align-items-center"  >
+                <img id="job-post" [src]="post.jobPostImage" alt="">
+                <div class="d-flex flex-column align-items-start">
+                    <h6>{{ post.title }}</h6>
+                    <p>{{ post.type }} </p>
+                </div>
+                <div id="statusTag" class="status-tag status-yes ms-auto">
+                    <img id="statusImage" src="assets/icons/Approved(1).svg" alt="">
+                    <span id="statusText">Approved</span>
+                </div>
+            </a>
+        </div>
+        <div class="recommend d-inline-flex flex-column">
+            <div class="h4">
+                <span class="color-1">Recommend </span>
+                <span class="color-2">for You</span>
+            </div>
+            <a class="rec-job-item d-flex justify-content-around">
+                <img src="assets/img/Logo/Company_TuDo.svg" alt="logo">
+                <div class="d-flex flex-column">
+                    <div class="d-flex flex-column">
+                        <div class="h6">
+                          Content Marketing
+                        </div>
+                        <div class="text">
+                          Công ty TNHH TuDo
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-column">
+                                <div class="tag">
+                                    Ho Chi Minh
+                                  </div>
+                                  <div class="tag">
+                                    30 days left to apply
+                                  </div>
+                            </div>
+                              
+                          <label class="bookmark-btn mr-3">
+                            <input type="checkbox" class="bookmark-checkbox" id="bookmarkToggle" />
+                            <span class="bookmark-icon mx-2" id="bookmarkIcon">
+                              <img src="assets/icons/Save_Inactive.svg" alt="Bookmark" />
+                            </span>
+                          </label>
+                        </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+    </div>
+
